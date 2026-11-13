@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Góc Đồ Hay Mỗi Ngày — Tủ Đồ Tiện Ích Chọn Lọc</title>
+  <style>
+    :root { --bg:#0f131a; --card:#181e29; --accent:#ff6b35; --gold:#ffd166; --txt:#f4f6fb; --muted:#9aa5b8; }
+    * { box-sizing:border-box; margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; }
+    body { background:var(--bg); color:var(--txt); padding:18px 14px 48px; max-width:540px; margin:0 auto; }
+    header { text-align:center; padding:14px 8px 18px; }
+    header h1 { font-size:1.35rem; margin-bottom:6px; color:#fff; }
+    header p { font-size:0.86rem; color:var(--muted); line-height:1.45; }
+    .disclosure { background:rgba(255,209,102,0.1); border:1px solid rgba(255,209,102,0.3); color:var(--gold);
+      font-size:0.76rem; padding:8px 12px; border-radius:12px; margin:10px 0 14px; text-align:center; }
+    .search-box input { width:100%; padding:13px 16px; border-radius:14px; border:1.5px solid #2b3548;
+      background:#141923; color:#fff; font-size:0.96rem; outline:none; margin-bottom:14px; }
+    .search-box input:focus { border-color:var(--gold); }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .card { background:var(--card); border-radius:18px; overflow:hidden; position:relative; border:1px solid #252e3f; display:flex; flex-direction:column; }
+    .badge-code { position:absolute; top:10px; left:10px; background:#111622e6; color:var(--gold); font-weight:800;
+      font-size:0.85rem; padding:4px 10px; border-radius:10px; border:1px solid var(--gold); }
+    .card img { width:100%; aspect-ratio:1/1; object-fit:cover; background:#111; }
+    .card-body { padding:11px; display:flex; flex-direction:column; flex:1; }
+    .cat-pill { font-size:0.68rem; color:#7dd3fc; margin-bottom:5px; font-weight:600; }
+    .card h2 { font-size:0.86rem; line-height:1.35; margin-bottom:7px; flex:1; }
+    .price { font-size:0.78rem; color:var(--muted); margin-bottom:10px; }
+    .price strong { color:var(--gold); }
+    .btn-row { display:flex; flex-direction:column; gap:6px; }
+    .btn { text-decoration:none; text-align:center; padding:8px 10px; border-radius:10px; font-size:0.78rem; font-weight:700; color:#fff; }
+    .btn-shopee { background:#ee4d2d; }
+    .btn-tiktok { background:#1f2937; border:1px solid #374151; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✨ Góc Đồ Hay Mỗi Ngày ✨</h1>
+    <p>Nhập <strong>Mã số (#01 ~ #08)</strong> trên video để tìm nhanh món đồ bạn cần nhé!</p>
+    <div class="disclosure">Quảng cáo · Các liên kết bên dưới là link tiếp thị liên kết, trang có thể nhận hoa hồng.</div>
+  </header>
+  <div class="search-box">
+    <input type="text" id="q" placeholder="🔍 Tìm nhanh theo mã (#07, #08) hoặc tên món đồ..." oninput="filterCards()" />
+  </div>
+  <section class="grid" id="grid">
+    
+    <article class="card" data-code="#08" data-cat="Phòng ngủ & Decor" data-title="đèn ngủ rgb chữ q tích hợp loa bluetooth, 15 âm dễ ngủ & báo thức bình minh">
+      <div class="badge-code">#08</div>
+      <img src="thumbs/item_08.jpg" alt="Đèn Ngủ RGB Chữ Q Tích Hợp Loa Bluetooth, 15 Âm Dễ Ngủ & Báo Thức Bình Minh" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Phòng ngủ & Decor</span>
+        <h2>Đèn Ngủ RGB Chữ Q Tích Hợp Loa Bluetooth, 15 Âm Dễ Ngủ & Báo Thức Bình Minh</h2>
+        <p class="price">Giá tham khảo: <strong>799.000₫ ~ 859.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/114QxghoSQ" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-08" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#07" data-cat="Nhà bếp" data-title="kệ gầm bếp & bàn trang điểm 2 tầng ngăn kéo trượt sơn tĩnh điện">
+      <div class="badge-code">#07</div>
+      <img src="thumbs/item_07.jpg" alt="Kệ Gầm Bếp & Bàn Trang Điểm 2 Tầng Ngăn Kéo Trượt Sơn Tĩnh Điện" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Nhà bếp</span>
+        <h2>Kệ Gầm Bếp & Bàn Trang Điểm 2 Tầng Ngăn Kéo Trượt Sơn Tĩnh Điện</h2>
+        <p class="price">Giá tham khảo: <strong>313.820₫ ~ 434.520₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/W8AKs3CGp" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-07" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#06" data-cat="Nhà bếp" data-title="kệ úp chén bát trên bồn rửa inox chịu lực 60kg">
+      <div class="badge-code">#06</div>
+      <img src="thumbs/item_06.jpg" alt="Kệ Úp Chén Bát Trên Bồn Rửa Inox Chịu Lực 60KG" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Nhà bếp</span>
+        <h2>Kệ Úp Chén Bát Trên Bồn Rửa Inox Chịu Lực 60KG</h2>
+        <p class="price">Giá tham khảo: <strong>727.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/7Af4T9XFmj" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-06" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#05" data-cat="Du lịch & Đi làm" data-title="vali du lịch đa năng khay đựng ly, giá đỡ ipad & cổng usb">
+      <div class="badge-code">#05</div>
+      <img src="thumbs/item_05.jpg" alt="Vali Du Lịch Đa Năng Khay Đựng Ly, Giá Đỡ iPad & Cổng USB" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Du lịch & Đi làm</span>
+        <h2>Vali Du Lịch Đa Năng Khay Đựng Ly, Giá Đỡ iPad & Cổng USB</h2>
+        <p class="price">Giá tham khảo: <strong>604.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/70LeGYtOBF" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-05" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#04" data-cat="Phòng ngủ & Decor" data-title="đèn ngủ vân gỗ tích hợp sạc không dây & loa bluetooth 3 trong 1">
+      <div class="badge-code">#04</div>
+      <img src="thumbs/item_04.jpg" alt="Đèn Ngủ Vân Gỗ Tích Hợp Sạc Không Dây & Loa Bluetooth 3 Trong 1" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Phòng ngủ & Decor</span>
+        <h2>Đèn Ngủ Vân Gỗ Tích Hợp Sạc Không Dây & Loa Bluetooth 3 Trong 1</h2>
+        <p class="price">Giá tham khảo: <strong>690.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/2VtEwhxQoV" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-04" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#03" data-cat="Ô tô" data-title="quây chống chuột ô tô đế lưới inox 304 gấp gọn">
+      <div class="badge-code">#03</div>
+      <img src="thumbs/item_03.jpg" alt="Quây Chống Chuột Ô Tô Đế Lưới Inox 304 Gấp Gọn" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Ô tô</span>
+        <h2>Quây Chống Chuột Ô Tô Đế Lưới Inox 304 Gấp Gọn</h2>
+        <p class="price">Giá tham khảo: <strong>870.000₫ ~ 1.150.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/906idDWayT" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-03" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#02" data-cat="Nhà bếp" data-title="tủ kệ bếp đa năng cửa lật thép carbon chắn bụi">
+      <div class="badge-code">#02</div>
+      <img src="thumbs/item_02.jpg" alt="Tủ Kệ Bếp Đa Năng Cửa Lật Thép Carbon Chắn Bụi" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Nhà bếp</span>
+        <h2>Tủ Kệ Bếp Đa Năng Cửa Lật Thép Carbon Chắn Bụi</h2>
+        <p class="price">Giá tham khảo: <strong>970.000₫ ~ 1.200.000₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/50aZrOUSSX" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-02" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+    <article class="card" data-code="#01" data-cat="Du lịch & Đi làm" data-title="balo laptop da pu form hộp hàn quốc chống thấm nước">
+      <div class="badge-code">#01</div>
+      <img src="thumbs/item_01.jpg" alt="Balo Laptop Da PU Form Hộp Hàn Quốc Chống Thấm Nước" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Du lịch & Đi làm</span>
+        <h2>Balo Laptop Da PU Form Hộp Hàn Quốc Chống Thấm Nước</h2>
+        <p class="price">Giá tham khảo: <strong>355.273₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/2VtErM5bFu" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="#tiktok-01" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script>
+    function filterCards() {
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      document.querySelectorAll('.card').forEach(c => {
+        const hit = !q || c.dataset.code.includes(q) || c.dataset.title.includes(q) || c.dataset.cat.toLowerCase().includes(q);
+        c.style.display = hit ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
