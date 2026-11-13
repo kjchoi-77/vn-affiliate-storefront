@@ -30,6 +30,12 @@
     .btn { text-decoration:none; text-align:center; padding:8px 10px; border-radius:10px; font-size:0.78rem; font-weight:700; color:#fff; }
     .btn-shopee { background:#ee4d2d; }
     .btn-tiktok { background:#1f2937; border:1px solid #374151; }
+    .cat-tabs { display:flex; gap:6px; overflow-x:auto; margin-bottom:12px; padding-bottom:4px; }
+    .cat-btn { background:#141923; color:var(--muted); border:1px solid #2b3548; border-radius:999px; padding:6px 12px; font-size:0.74rem; font-weight:600; white-space:nowrap; cursor:pointer; }
+    .cat-btn.active { background:var(--gold); color:#111; border-color:var(--gold); }
+    .lead-box { margin-top:20px; background:#141923; border:1px solid #2b3548; border-radius:16px; padding:14px; text-align:center; }
+    .lead-box p { font-size:0.8rem; color:var(--muted); margin-bottom:10px; line-height:1.45; }
+    .btn-lead { display:inline-block; background:#0084ff; color:#fff; text-decoration:none; padding:9px 16px; border-radius:10px; font-size:0.8rem; font-weight:700; }
   </style>
 </head>
 <body>
@@ -40,6 +46,13 @@
   </header>
   <div class="search-box">
     <input type="text" id="q" placeholder="🔍 Tìm nhanh theo mã (#07, #08) hoặc tên món đồ..." oninput="filterCards()" />
+  </div>
+  <div class="cat-tabs" id="catTabs">
+    <button class="cat-btn active" onclick="setCat('', this)">Tất cả</button>
+    <button class="cat-btn" onclick="setCat('Nhà bếp', this)">Nhà bếp</button>
+    <button class="cat-btn" onclick="setCat('Phòng ngủ & Decor', this)">Phòng ngủ</button>
+    <button class="cat-btn" onclick="setCat('Du lịch & Đi làm', this)">Du lịch</button>
+    <button class="cat-btn" onclick="setCat('Ô tô', this)">Ô tô</button>
   </div>
   <section class="grid" id="grid">
     
@@ -65,7 +78,7 @@
         <p class="price">Giá tham khảo: <strong>313.820₫ ~ 434.520₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/W8AKs3CGp" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-07" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://vt.tiktok.com/ZS9fC2YmArPBK-Wizx8/" target="_blank" rel="noopener" class="btn btn-tiktok">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -148,14 +161,42 @@
       </div>
     </article>
   </section>
+  <div class="lead-box">
+    <p>💬 Cần tư vấn chọn size hoặc nhận mã giảm giá mới nhất? Nhắn ngay cho <strong>Góc Đồ Hay Mỗi Ngày</strong> nhé!</p>
+    <a href="https://www.facebook.com/249201182152755" target="_blank" rel="noopener" class="btn-lead">📩 Nhắn Page Facebook nhận ưu đãi</a>
+  </div>
   <script>
+    let activeCat = '';
+    const srcParam = new URLSearchParams(window.location.search).get('src') || 'direct';
+
+    function setCat(cat, btn) {
+      activeCat = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      filterCards();
+    }
+
     function filterCards() {
       const q = document.getElementById('q').value.trim().toLowerCase();
       document.querySelectorAll('.card').forEach(c => {
-        const hit = !q || c.dataset.code.includes(q) || c.dataset.title.includes(q) || c.dataset.cat.toLowerCase().includes(q);
-        c.style.display = hit ? 'flex' : 'none';
+        const matchQ = !q || c.dataset.code.includes(q) || c.dataset.title.includes(q) || c.dataset.cat.toLowerCase().includes(q);
+        const matchCat = !activeCat || c.dataset.cat === activeCat;
+        c.style.display = (matchQ && matchCat) ? 'flex' : 'none';
       });
     }
+
+    document.querySelectorAll('.card .btn').forEach(a => {
+      a.addEventListener('click', () => {
+        const card = a.closest('.card');
+        const key = 'vn_aff_clicks_v1';
+        try {
+          const stats = JSON.parse(localStorage.getItem(key) || '{}');
+          const id = (card ? card.dataset.code : 'unknown') + ':' + srcParam;
+          stats[id] = (stats[id] || 0) + 1;
+          localStorage.setItem(key, JSON.stringify(stats));
+        } catch (e) {}
+      });
+    });
   </script>
 </body>
 </html>
