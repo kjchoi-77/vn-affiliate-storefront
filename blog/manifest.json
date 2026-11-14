@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "slug": "vi-item-07.html",
+      "lang": "vi",
+      "code": "#07",
+      "title": "Review Kệ Gầm Bếp 2 Tầng Ngăn Kéo Trượt: Tối Ưu Diện Tích Căn Hộ",
+      "meta_desc": "Kệ gầm bếp 2 tầng ngăn kéo trượt giúp sắp xếp chai lọ gọn gàng, chịu tải 25kg. Giải pháp hoàn hảo cho bếp chung cư và bàn trang điểm tại Việt Nam.",
+      "updated_at": "2026-11-14T22:20:01.823409"
+    },
+    {
+      "slug": "en-item-07.html",
+      "lang": "en",
+      "code": "#07",
+      "title": "2-Tier Sliding Under-Sink Organizer: Maximize Cabinet Space",
+      "meta_desc": "End the clutter with our 2-tier sliding cabinet organizer. Features heavy-duty powder-coated steel and a 55lb capacity for kitchen and vanity storage.",
+      "updated_at": "2026-11-14T22:20:10.596183"
+    },
+    {
+      "slug": "ko-item-07.html",
+      "lang": "ko",
+      "code": "#07",
+      "title": "싱크대 하부장 정리의 혁명, 2단 슬라이딩 수납 선반 완벽 가이드",
+      "meta_desc": "좁고 깊은 싱크대 밑, 이제 허리 굽히지 마세요. 25kg 하중을 견디는 2단 슬라이딩 선반으로 주방과 화장대 수납 고민을 한 번에 해결하는 꿀팁을 확인하세요.",
+      "updated_at": "2026-11-14T22:20:24.652304"
+    }
+  ]
+}
