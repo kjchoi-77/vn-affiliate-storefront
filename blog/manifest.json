@@ -47,6 +47,30 @@
       "title": "좁은 원룸 분위기 메이커! Q형 RGB 무드등 블루투스 스피커 & 일출 알람시계 가이드",
       "meta_desc": "1600만 컬러 RGB 조명과 블루투스 스피커, 일출 알람이 하나로! 아파트 침실이나 원룸 인테리어에 딱 맞는 Q형 스마트 무드등의 실사용 장단점과 공간 활용 팁을 정리했습니다.",
       "updated_at": "2026-11-17T10:00:51.301588"
+    },
+    {
+      "slug": "vi-item-05.html",
+      "lang": "vi",
+      "code": "#05",
+      "title": "Review Vali Du Lịch Đa Năng Có Khay Đựng Ly & Cổng USB Tiện Lợi",
+      "meta_desc": "Đánh giá vali du lịch đa năng tích hợp khay đựng ly, giá đỡ iPad và cổng USB. Giải pháp rảnh tay hoàn hảo cho chuyến đi công tác và du lịch ngắn ngày.",
+      "updated_at": "2026-11-19T10:17:06.593141"
+    },
+    {
+      "slug": "en-item-05.html",
+      "lang": "en",
+      "code": "#05",
+      "title": "Best Multifunctional Carry-On: USB Charging & Cup Holder Guide",
+      "meta_desc": "Discover the ultimate hands-free travel experience with our review of the multifunctional pastel carry-on featuring a built-in cup holder and USB port.",
+      "updated_at": "2026-11-19T10:17:15.933965"
+    },
+    {
+      "slug": "ko-item-05.html",
+      "lang": "ko",
+      "code": "#05",
+      "title": "공항에서 커피 들지 마세요! 컵홀더·아이패드 거치 다기능 캐리어 리뷰",
+      "meta_desc": "인천공항 필수템! 커피 홀더와 USB 충전, 아이패드 거치대까지 탑재된 파스텔 다기능 캐리어를 소개합니다. 여행의 질을 높여주는 스마트한 수납 가이드와 장단점 비교.",
+      "updated_at": "2026-11-19T10:17:25.592074"
     }
   ]
 }
