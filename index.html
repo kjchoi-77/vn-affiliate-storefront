@@ -30,6 +30,7 @@
     .btn { text-decoration:none; text-align:center; padding:8px 10px; border-radius:10px; font-size:0.78rem; font-weight:700; color:#fff; }
     .btn-shopee { background:#ee4d2d; }
     .btn-tiktok { background:#1f2937; border:1px solid #374151; }
+    .btn-tiktok-live { background:linear-gradient(90deg,#111827,#1e1b4b); border:1.5px solid #25f4ee; box-shadow:0 0 8px rgba(37,244,238,0.22); }
     .cat-tabs { display:flex; gap:6px; overflow-x:auto; margin-bottom:12px; padding-bottom:4px; }
     .cat-btn { background:#141923; color:var(--muted); border:1px solid #2b3548; border-radius:999px; padding:6px 12px; font-size:0.74rem; font-weight:600; white-space:nowrap; cursor:pointer; }
     .cat-btn.active { background:var(--gold); color:#111; border-color:var(--gold); }
@@ -41,11 +42,11 @@
 <body>
   <header>
     <h1>✨ Góc Đồ Hay Mỗi Ngày ✨</h1>
-    <p>Nhập <strong>Mã số (#01 ~ #10)</strong> trên video để tìm nhanh món đồ bạn cần nhé!</p>
+    <p>Nhập <strong>Mã số (#01 ~ #12)</strong> trên video để tìm nhanh món đồ bạn cần — hỗ trợ cả <strong>Shopee & TikTok Shop</strong>!</p>
     <div class="disclosure">Quảng cáo · Các liên kết bên dưới là link tiếp thị liên kết, trang có thể nhận hoa hồng.</div>
   </header>
   <div class="search-box">
-    <input type="text" id="q" placeholder="🔍 Tìm nhanh theo mã (#07, #09, #10) hoặc tên món đồ..." oninput="filterCards()" />
+    <input type="text" id="q" placeholder="🔍 Tìm nhanh theo mã (#07, #09, #11, #12) hoặc tên món đồ..." oninput="filterCards()" />
   </div>
   <div class="cat-tabs" id="catTabs">
     <button class="cat-btn active" onclick="setCat('', this)">Tất cả</button>
@@ -58,6 +59,34 @@
   </div>
   <section class="grid" id="grid">
     
+    <article class="card" data-code="#12" data-cat="Phòng ngủ & Decor" data-title="đèn treo màn hình máy tính bảo vệ mắt chống chói kèm núm xoay không dây">
+      <div class="badge-code">#12 NEW</div>
+      <img src="thumbs/item_12.jpg" alt="Đèn Treo Màn Hình Máy Tính Chống Chói Kèm Núm Xoay Không Dây" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Phòng ngủ & Decor</span>
+        <h2>Đèn Treo Màn Hình Máy Tính Chống Chói Kèm Núm Xoay Không Dây (★5.0)</h2>
+        <p class="price">Giá tham khảo: <strong>321.080₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/4LL9k5uryQ" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-code="#11" data-cat="Vệ sinh thông minh" data-title="máy hút bụi cầm tay mini tamashio không dây 3 trong 1 hút thổi bụi ô tô bàn phím">
+      <div class="badge-code">#11 NEW</div>
+      <img src="thumbs/item_11.jpg" alt="Máy Hút Bụi Cầm Tay Mini TAMASHIO Không Dây 3 Trong 1 Hút & Thổi" loading="lazy" />
+      <div class="card-body">
+        <span class="cat-pill">Vệ sinh thông minh</span>
+        <h2>Máy Hút Bụi Cầm Tay Mini TAMASHIO Không Dây 3 Trong 1 Hút &amp; Thổi (★5.0)</h2>
+        <p class="price">Giá tham khảo: <strong>100.280₫ ~ 108.750₫</strong></p>
+        <div class="btn-row">
+          <a href="https://s.shopee.vn/6L6CVy8oJ2" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
+          <a href="https://vt.tiktok.com/ZS9Pfv2SHKf8v-41ZsX/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
+        </div>
+      </div>
+    </article>
+
     <article class="card" data-code="#10" data-cat="Sắp xếp nhà cửa" data-title="tủ nhựa đựng đồ gấp gọn hk16 cửa nam châm trong suốt có bánh xe">
       <div class="badge-code">#10 NEW</div>
       <img src="thumbs/item_10.jpg" alt="Tủ Nhựa Đựng Đồ Gấp Gọn HK16 Cửa Nam Châm Trong Suốt Có Bánh Xe" loading="lazy" />
@@ -67,7 +96,7 @@
         <p class="price">Giá tham khảo: <strong>239.000₫ ~ 599.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/1gKLQ2iMjC" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-10" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://vt.tiktok.com/ZS9Pf7ptpS7kn-xvuSv/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -81,7 +110,7 @@
         <p class="price">Giá tham khảo: <strong>262.800₫ ~ 292.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/8VAcKEYf7t" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-09" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://vt.tiktok.com/ZS9Pf7huSEdh8-FxBnW/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -95,7 +124,7 @@
         <p class="price">Giá tham khảo: <strong>799.000₫ ~ 859.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/114QxghoSQ" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-08" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
         </div>
       </div>
     </article>
@@ -105,10 +134,10 @@
       <div class="card-body">
         <span class="cat-pill">Nhà bếp</span>
         <h2>Kệ Gầm Bếp & Bàn Trang Điểm 2 Tầng Ngăn Kéo Trượt Sơn Tĩnh Điện</h2>
-        <p class="price">Giá tham khảo: <strong>313.820₫ ~ 434.520₫</strong></p>
+        <p class="price">Giá tham khảo: <strong>177.049₫ ~ 434.520₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/W8AKs3CGp" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="https://vt.tiktok.com/ZS9fC2YmArPBK-Wizx8/" target="_blank" rel="noopener" class="btn btn-tiktok">🎵 Xem trên TikTok Shop</a>
+          <a href="https://vt.tiktok.com/ZS9fC2YmArPBK-Wizx8/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -118,10 +147,10 @@
       <div class="card-body">
         <span class="cat-pill">Nhà bếp</span>
         <h2>Kệ Úp Chén Bát Trên Bồn Rửa Inox Chịu Lực 60KG</h2>
-        <p class="price">Giá tham khảo: <strong>727.000₫</strong></p>
+        <p class="price">Giá tham khảo: <strong>704.060₫ ~ 727.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/7Af4T9XFmj" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-06" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://vt.tiktok.com/ZS9PfWQRcquvn-8AggX/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -134,7 +163,7 @@
         <p class="price">Giá tham khảo: <strong>604.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/70LeGYtOBF" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-05" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
         </div>
       </div>
     </article>
@@ -147,7 +176,7 @@
         <p class="price">Giá tham khảo: <strong>690.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/2VtEwhxQoV" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-04" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
         </div>
       </div>
     </article>
@@ -160,7 +189,7 @@
         <p class="price">Giá tham khảo: <strong>870.000₫ ~ 1.150.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/906idDWayT" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-03" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
         </div>
       </div>
     </article>
@@ -170,10 +199,10 @@
       <div class="card-body">
         <span class="cat-pill">Nhà bếp</span>
         <h2>Tủ Kệ Bếp Đa Năng Cửa Lật Thép Carbon Chắn Bụi</h2>
-        <p class="price">Giá tham khảo: <strong>970.000₫ ~ 1.200.000₫</strong></p>
+        <p class="price">Giá tham khảo: <strong>970.000₫ ~ 1.580.000₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/50aZrOUSSX" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-02" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://vt.tiktok.com/ZS9PfWEtbjjQ1-x652Y/" target="_blank" rel="noopener" class="btn btn-tiktok-live">🎵 Xem trên TikTok Shop</a>
         </div>
       </div>
     </article>
@@ -186,7 +215,7 @@
         <p class="price">Giá tham khảo: <strong>355.273₫</strong></p>
         <div class="btn-row">
           <a href="https://s.shopee.vn/2VtErM5bFu" target="_blank" rel="noopener" class="btn btn-shopee">🛒 Xem trên Shopee</a>
-          <a href="#tiktok-01" class="btn btn-tiktok">🎵 Giỏ hàng TikTok</a>
+          <a href="https://tiktok.me/minhne.official" target="_blank" rel="noopener" class="btn btn-tiktok">💬 Nhắn TikTok lấy ưu đãi</a>
         </div>
       </div>
     </article>
